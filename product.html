@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заезд — TurboKart</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">TurboKart</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="product.html">Заезд</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Заявка</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Дополнительно
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="catalog.html">Все заезды</a></li>
+              <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
+              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Заезд «Старт»</li>
+      </ol>
+    </nav>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-sm">
+          <div class="placeholder-image bg-light border rounded d-flex align-items-center justify-content-center">
+            <span class="text-muted">Изображение заезда</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <span class="badge bg-warning text-dark mb-3">Хит</span>
+        <h1 class="h2">Заезд «Старт»</h1>
+        <p class="lead text-muted">
+          Заезд на крытой трассе для новичков: инструктаж, шлем и 10 минут езды на взрослом карте.
+        </p>
+
+        <p class="fs-3 fw-bold">1200 руб.</p>
+
+        <div class="d-flex gap-2 mb-4">
+          <a class="btn btn-primary btn-lg" href="order.html">
+            Забронировать
+          </a>
+          <a class="btn btn-outline-secondary btn-lg" href="catalog.html">
+            Назад в каталог
+          </a>
+        </div>
+
+        <div class="alert alert-warning" role="alert">
+          Это учебная страница заезда. Данные используются для демонстрации Bootstrap-компонентов.
+        </div>
+      </div>
+    </div>
+
+    <section class="mt-5">
+      <h2 class="h4 mb-3">Характеристики</h2>
+
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle">
+          <tbody>
+            <tr>
+              <th scope="row">Трасса</th>
+              <td>Крытая</td>
+            </tr>
+            <tr>
+              <th scope="row">Длительность</th>
+              <td>10 минут</td>
+            </tr>
+            <tr>
+              <th scope="row">Возраст</th>
+              <td>С 14 лет</td>
+            </tr>
+            <tr>
+              <th scope="row">Цена</th>
+              <td>1200 руб.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="my-5">
+      <h2 class="h4 mb-3">Частые вопросы</h2>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqOne"
+              aria-expanded="true"
+              aria-controls="faqOne"
+            >
+              Нужен ли опыт вождения?
+            </button>
+          </h3>
+          <div
+            id="faqOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Нет, перед заездом инструктор объясняет управление картом и правила трассы.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faqTwo"
+              aria-expanded="false"
+              aria-controls="faqTwo"
+            >
+              Что нужно взять с собой?
+            </button>
+          </h3>
+          <div
+            id="faqTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body">
+              Удобную закрытую одежду и обувь. Шлем и подшлемник выдаются на месте.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
