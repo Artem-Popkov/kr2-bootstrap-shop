@@ -59,3 +59,17 @@ window.TURBOKART_KARTS = [
     }
   }
 ];
+
+window.TURBOKART_EVENTS = [
+  {id: "school", title: "Школа пилотов", day: 6, time: "12:00", kart: "rt10", people: 1, description: "Вводная тренировка с инструктором: посадка, торможение и траектория первого поворота."},
+  {id: "junior", title: "Детская тренировка", day: 0, time: "11:00", kart: "lr6", people: 1, description: "Отдельная сессия для пилотов от 7 лет на крытой трассе."},
+  {id: "team", title: "Командный заезд", day: 5, time: "19:00", kart: "rt10", people: 6, description: "До шести пилотов одного класса на стартовой решётке."}
+];
+function nextEventDate(event, now = new Date()) {
+  const date = new Date(now);
+  const [hour, minute] = event.time.split(":").map(Number);
+  date.setHours(hour, minute, 0, 0);
+  date.setDate(date.getDate() + (event.day - date.getDay() + 7) % 7);
+  if (date <= now) date.setDate(date.getDate() + 7);
+  return date;
+}
