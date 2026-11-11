@@ -1,219 +1,360 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — TurboKart</title>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="css/custom.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TurboKart — карты для детей и взрослых, трассы и понятные тарифы за время заезда. Учебный проект.">
+<title>Картинг, который захочется повторить — TurboKart</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css?v=20261110a">
 </head>
 <body>
-  <header class="bg-primary text-white py-4">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-8">
-          <h1 class="h3 mb-1">TurboKart</h1>
-          <p class="mb-0 opacity-75">
-            Картинг-центр: трассы, заезды и бронирование
-          </p>
-        </div>
+<a class="skip-link" href="#main">К содержанию</a>
+<header class="site-header">
+<div class="topline">
+<div class="container d-flex flex-wrap justify-content-between gap-2">
+<span>Крытая трасса круглый год · открытая летом</span>
+<span>Ежедневно 10:00–23:00</span>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="navbar-brand brand" href="index.html">TURBO<span>KART</span>
+<small>КАРТИНГ-ЦЕНТР</small>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+<span class="navbar-toggler-icon">
+</span>
+</button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+<ul class="navbar-nav mx-auto gap-lg-3">
+<li class="nav-item">
+<a class="nav-link active" aria-current=page href="index.html">Главная</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="catalog.html">Карты и цены</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="product.html">О картах</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="contacts.html">Контакты</a>
+</li>
+<li class="nav-item dropdown">
+<button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Посетителям</button>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="index.html#tracks">Трассы</a>
+</li>
+<li>
+<a class="dropdown-item" href="contacts.html#rules">Правила и вопросы</a>
+</li>
+<li>
+<a class="dropdown-item" href="contacts.html#schedule">Часы работы</a>
+</li>
+</ul>
+</li>
+</ul>
+<a class="btn btn-primary" href="order.html">Выбрать заезд <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</nav>
+</header>
+<main id="main">
+<section class="hero">
+<div class="hero-photo" role="img" aria-label="Пилот на карте проходит поворот крытой трассы">
+</div>
+<div class="container hero-content">
+<div class="row">
+<div class="col-lg-8">
+<p class="eyebrow text-accent">01 / ВСТРЕЧАЕМСЯ НА СТАРТЕ</p>
+<h1>МЕНЬШЕ СЛОВ.<br>БОЛЬШЕ <span>СКОРОСТИ.</span>
+</h1>
+<p class="hero-lead">Первый заезд или новый личный рекорд.<br>Выбери свой карт — остальное начнётся на трассе.</p>
+<div class="d-flex flex-wrap gap-3">
+<a class="btn btn-primary btn-lg" href="catalog.html">Карты и цены ↗</a>
+<a class="btn btn-outline-light btn-lg" href="#tracks">Посмотреть трассы</a>
+</div>
+</div>
+</div>
+<div class="hero-stats row g-4">
+<div class="col-6 col-md-3">
+<strong>02</strong>
+<span>трассы для твоего заезда</span>
+</div>
+<div class="col-6 col-md-3">
+<strong>03</strong>
+<span>модели картов</span>
+</div>
+<div class="col-6 col-md-3">
+<strong>10–20</strong>
+<span>минут чистого драйва</span>
+</div>
+<div class="col-6 col-md-3">
+<strong>7+</strong>
+<span>первые заезды после инструктажа</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-decor" id="popular">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="eyebrow">02 / НАЙДИ СВОЙ ТЕМП</p>
+<h2>Три карта.<br>Три способа начать.</h2>
+</div>
+<a class="text-link" href="catalog.html#prices">Сравнить тарифы ↗</a>
+</div>
+<div class="row g-4">
+<div class="col-12 col-md-6 col-lg-4">
+<article class="card kart-card h-100">
+<div class="kart-visual d-flex align-items-center justify-content-center">
+<span class="kart-number" aria-hidden="true">01</span>
+<img src="images/sodi-lr6.png" alt="SODI LR6, прокатный карт" loading="lazy">
+<span class="badge kart-badge">Первый старт</span>
+</div>
+<div class="card-body p-4 d-flex flex-column">
+<p class="eyebrow">Детям и юным пилотам</p>
+<h3 class="card-title">SODI LR6</h3>
+<p class="text-secondary">7–13 лет · рост от 130 см</p>
+<dl class="kart-specs">
+<div>
+<dt>Комплектация</dt>
+<dd>Honda GX160</dd>
+</div>
+<div>
+<dt>Трасса</dt>
+<dd>Крытая · заезды 7–13 лет</dd>
+</div>
+</dl>
+<p class="card-text small text-secondary">Регулируемые сиденье, руль и педали</p>
+<div class="mt-auto">
+<p class="price">
+<span class="price-amount" data-price-kart="lr6" data-price-duration="10">900 ₽</span>
+<span> / 10 минут</span>
+</p>
+<div class="d-flex gap-2">
+<a class="btn btn-primary flex-grow-1" href="order.html?kart=lr6">Выбрать время ↗</a>
+<a class="btn btn-outline-dark" href="product.html?kart=lr6">О карте</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+<article class="card kart-card h-100">
+<div class="kart-visual d-flex align-items-center justify-content-center">
+<span class="kart-number" aria-hidden="true">02</span>
+<img src="images/sodi-rt10.png" alt="SODI RT10, прокатный карт" loading="lazy">
+<span class="badge kart-badge">Начни здесь</span>
+</div>
+<div class="card-body p-4 d-flex flex-column">
+<p class="eyebrow">Взрослым и новичкам</p>
+<h3 class="card-title">SODI RT10</h3>
+<p class="text-secondary">от 14 лет · рост от 145 см</p>
+<dl class="kart-specs">
+<div>
+<dt>Комплектация</dt>
+<dd>Honda GX270</dd>
+</div>
+<div>
+<dt>Трасса</dt>
+<dd>Крытая и открытая</dd>
+</div>
+</dl>
+<p class="card-text small text-secondary">EASY DRIVE и регулируемые педали</p>
+<div class="mt-auto">
+<p class="price">
+<span class="price-amount" data-price-kart="rt10" data-price-duration="10">1 200 ₽</span>
+<span> / 10 минут</span>
+</p>
+<div class="d-flex gap-2">
+<a class="btn btn-primary flex-grow-1" href="order.html?kart=rt10">Выбрать время ↗</a>
+<a class="btn btn-outline-dark" href="product.html?kart=rt10">О карте</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+<article class="card kart-card h-100">
+<div class="kart-visual d-flex align-items-center justify-content-center">
+<span class="kart-number" aria-hidden="true">03</span>
+<img src="images/sodi-sport.png" alt="SODI Sport, прокатный карт" loading="lazy">
+<span class="badge kart-badge">Следующий уровень</span>
+</div>
+<div class="card-body p-4 d-flex flex-column">
+<p class="eyebrow">Пилотам с опытом</p>
+<h3 class="card-title">SODI Sport</h3>
+<p class="text-secondary">от 16 лет · рост от 150 см</p>
+<dl class="kart-specs">
+<div>
+<dt>Комплектация</dt>
+<dd>Honda GX390</dd>
+</div>
+<div>
+<dt>Трасса</dt>
+<dd>Крытая и открытая</dd>
+</div>
+</dl>
+<p class="card-text small text-secondary">Спортивное шасси и регулируемые педали</p>
+<div class="mt-auto">
+<p class="price">
+<span class="price-amount" data-price-kart="sport" data-price-duration="10">1 600 ₽</span>
+<span> / 10 минут</span>
+</p>
+<div class="d-flex gap-2">
+<a class="btn btn-primary flex-grow-1" href="order.html?kart=sport">Выбрать время ↗</a>
+<a class="btn btn-outline-dark" href="product.html?kart=sport">О карте</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
 
-        <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-          <span class="badge bg-light text-primary">
-            КР №2
-          </span>
-        </div>
-      </div>
-    </div>
-  </header>
+</div>
+</section>
+<section class="section section-dark section-decor section-decor-dark" id="tracks">
+<div class="container">
+<p class="eyebrow text-accent">03 / КАЖДЫЙ ПОВОРОТ — НОВЫЙ</p>
+<h2>Одна страсть. Две трассы.</h2>
+<div class="row g-4 mt-3">
+<div class="col-md-6">
+<article class="track-panel h-100">
+<span class="badge text-bg-light">В любую погоду</span>
+<h3>Крытая трасса</h3>
+<p>Узкая шпилька, двойной разворот и связка из быстрых смен направления. Здесь важнее точная траектория, чем максимальная скорость.</p>
+<figure class="track-map"><img src="images/track-indoor.svg" alt="Крытая трасса: схема маршрута с 16 поворотами, стартом и направлением движения" loading="lazy" width="600" height="360"></figure>
+<dl class="track-stats row row-cols-2 g-3 mb-4">
+<div class="col"><dt>Длина</dt><dd>420 м</dd></div>
+<div class="col"><dt>Поворотов</dt><dd>16</dd></div>
+<div class="col"><dt>Рекорд круга</dt><dd>34,8 с</dd></div>
+<div class="col"><dt>Круг новичка</dt><dd>50–65 с</dd></div>
+</dl>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">TurboKart</a>
+<p class="track-meta">Круглый год · отдельные заезды для детей 7–13 лет</p>
+<a href="order.html?track=indoor" class="btn btn-outline-light">Хочу на крытую ↗</a>
+</article>
+</div>
+<div class="col-md-6">
+<article class="track-panel track-outdoor h-100">
+<span class="badge text-bg-light">Летний сезон</span>
+<h3>Открытая трасса</h3>
+<p>Скоростная прямая, волнообразная S-связка и две шпильки в технической части. Быстрые участки чередуются с точными торможениями.</p>
+<figure class="track-map"><img src="images/track-outdoor.svg" alt="Открытая трасса: схема маршрута с 18 поворотами, стартом и направлением движения" loading="lazy" width="600" height="360"></figure>
+<dl class="track-stats row row-cols-2 g-3 mb-4">
+<div class="col"><dt>Длина</dt><dd>680 м</dd></div>
+<div class="col"><dt>Поворотов</dt><dd>18</dd></div>
+<div class="col"><dt>Рекорд круга</dt><dd>49,6 с</dd></div>
+<div class="col"><dt>Круг новичка</dt><dd>70–90 с</dd></div>
+</dl>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<p class="track-meta">Июнь — август · только в сухую погоду</p>
+<a href="order.html?track=outdoor" class="btn btn-outline-light">Выбрать открытую ↗</a>
+</article>
+</div>
+</div>
+</div>
+</section>
+<div class="section-decor visit-sections">
+<section class="section" id="first-visit">
+<div class="container">
+<div class="row g-5">
+<div class="col-lg-5">
+<p class="eyebrow">04 / ВПЕРВЫЕ ЗА РУЛЁМ?</p>
+<h2>Всё начинается<br>с простого.</h2>
+<p class="text-secondary">Опыт не обязателен. Поможем с посадкой, объясним сигналы и подготовим к первому кругу.</p>
+</div>
+<div class="col-lg-7">
+<ol class="visit-steps">
+<li class="d-flex gap-4">
+<span>01</span>
+<div>
+<h3>Выбери карт и время</h3>
+<p>Сравни модели, длительность и стоимость. Укажи пожелания в заявке.</p>
+</div>
+</li>
+<li class="d-flex gap-4">
+<span>02</span>
+<div>
+<h3>Приезжай заранее</h3>
+<p>Заложи 20 минут на регистрацию, подбор экипировки и инструктаж.</p>
+</div>
+</li>
+<li class="d-flex gap-4">
+<span>03</span>
+<div>
+<h3>Почувствуй трассу</h3>
+<p>Следуй указаниям инструктора. Скорость придёт вместе с уверенностью.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
 
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Заезд</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Заявка</a>
-          </li>
+</div>
+</section>
+<section class="pb-5" id="events">
+<div class="container">
+<div class="event-panel">
+<div>
+<p class="eyebrow">КОМАНДЕ ТОЖЕ НУЖЕН ПИТ-СТОП</p>
+<h2>Встретимся<br>на стартовой решётке?</h2>
+<p>День рождения, встреча друзей или корпоративный заезд.<br>Расскажи о своей компании — обсудим формат.</p>
+</div>
+<a class="btn btn-dark btn-lg" href="order.html?event=group">Заявка для команды ↗</a>
+</div>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Дополнительно
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все заезды</a></li>
-              <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <section class="container my-5">
-      <div class="row align-items-center g-4">
-        <div class="col-12 col-lg-6">
-          <h2 class="display-5 fw-bold">
-            Картинг-центр TurboKart
-          </h2>
-          <p class="lead text-muted">
-            Выберите заезд, посмотрите расписание и оставьте заявку на бронирование.
-          </p>
-          <a class="btn btn-primary btn-lg" href="catalog.html">
-            Перейти в каталог
-          </a>
-        </div>
-
-        <div class="col-12 col-lg-6">
-          <img src="images/hero-kart.jpg" class="img-fluid rounded" alt="Пилот на карте с номером 2 проходит поворот крытой трассы">
-        </div>
-      </div>
-    </section>
-
-    <section class="container my-5">
-      <h2 class="text-center mb-4">Преимущества</h2>
-
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Две трассы</h3>
-            <p class="mb-0 text-muted">
-              Крытая трасса работает круглый год, открытая — летом.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Безопасность</h3>
-            <p class="mb-0 text-muted">
-              Шлемы и инструктаж перед каждым заездом.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Для всех возрастов</h3>
-            <p class="mb-0 text-muted">
-              Детские карты с 7 лет, взрослые — с 14 лет.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="container my-5" id="popular">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0">Популярные заезды</h2>
-        <a class="btn btn-outline-primary" href="catalog.html">
-          Все заезды
-        </a>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-success mb-3">Новинка</span>
-            <h3 class="h5">Гонка на время</h3>
-            <p class="text-muted">
-              Квалификация и финал с таблицей результатов.
-            </p>
-            <p class="fw-bold mb-3">2500 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-warning text-dark mb-3">Хит</span>
-            <h3 class="h5">Заезд «Старт»</h3>
-            <p class="text-muted">
-              10 минут на крытой трассе для новичков.
-            </p>
-            <p class="fw-bold mb-3">1200 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-danger mb-3">Скидка</span>
-            <h3 class="h5">Детский заезд</h3>
-            <p class="text-muted">
-              8 минут на детских картах.
-            </p>
-            <p class="fw-bold mb-3">900 руб.</p>
-            <a class="btn btn-primary" href="product.html">
-              Подробнее
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-dark text-white py-4 mt-5">
-    <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-md-6">
-          <p class="mb-0">
-            &copy; 2026 TurboKart. Учебный проект.
-          </p>
-        </div>
-
-        <div class="col-12 col-md-6 text-md-end">
-          <a class="text-white text-decoration-none me-3" href="catalog.html">
-            Каталог
-          </a>
-          <a class="text-white text-decoration-none" href="order.html">
-            Заявка
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-  </script>
+</div>
+</section>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-12 col-lg-4">
+<a class="brand footer-brand" href="index.html">TURBO<span>KART</span>
+</a>
+<p class="mt-3 footer-description">Твой первый поворот. Твой новый рекорд.<br>Картинг для детей, друзей и больших команд.</p>
+<span class="availability">
+<span aria-hidden="true">●</span> Крытая трасса — круглый год</span>
+</div>
+<div class="col-6 col-lg-2">
+<h2>На трассу</h2>
+<a href="catalog.html">Карты и цены</a>
+<a href="index.html#tracks">Наши трассы</a>
+<a href="order.html">Заявка на заезд</a>
+<a href="index.html#events">Корпоративы</a>
+</div>
+<div class="col-6 col-lg-3">
+<h2>Перед визитом</h2>
+<a href="contacts.html#rules">Правила и экипировка</a>
+<a href="contacts.html#faq">Частые вопросы</a>
+<a href="contacts.html#schedule">Часы работы</a>
+</div>
+<div class="col-12 col-lg-3">
+<h2>Контакты центра</h2>
+<p>Москва · виртуальная площадка</p>
+<p>Ежедневно 10:00–23:00</p>
+<a href="mailto:hello@turbokart.example">hello@turbokart.example</a>
+<p class="small mt-2">Телефон и точный адрес будут добавлены перед реальным открытием.</p>
+<a href="contacts.html">Контакты и как добраться ↗</a>
+</div>
+</div>
+<div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+<span>© 2026 TurboKart</span>
+<span>Учебный проект. Тарифы и условия демонстрационные. Заявки не отправляются.</span>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="js/karts.js?v=20261109c">
+</script>
+<script src="js/main.js?v=20261109d">
+</script>
 </body>
 </html>

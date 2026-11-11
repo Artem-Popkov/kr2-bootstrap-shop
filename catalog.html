@@ -1,229 +1,254 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог — TurboKart</title>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="css/custom.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TurboKart — карты для детей и взрослых, трассы и понятные тарифы за время заезда. Учебный проект.">
+<title>Карты и цены — TurboKart</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css?v=20261109f">
 </head>
-<body class="bg-light">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">TurboKart</a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Заезд</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Заявка</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Дополнительно
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все заезды</a></li>
-              <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container my-5">
-    <div class="alert alert-info" role="alert">
-      Выберите заезд из каталога. Карточки заездов оформлены с помощью компонента Bootstrap card.
-    </div>
-
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="h2 mb-0">Каталог заездов</h1>
-      <a class="btn btn-outline-primary" href="order.html">
-        Оставить заявку
-      </a>
-    </div>
-
-    <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-start mb-3">
-                <h2 class="card-title h5">Заезд «Старт»</h2>
-                <span class="badge bg-warning text-dark">Хит</span>
-              </div>
-
-              <p class="card-text text-muted">
-                10 минут на крытой трассе. Подходит новичкам.
-              </p>
-
-              <p class="fw-bold fs-5 mt-auto">1200 руб.</p>
-
-              <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
-                <button
-                  class="btn btn-outline-primary"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#orderModal"
-                >
-                  Забронировать
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-start mb-3">
-                <h2 class="card-title h5">Детский заезд</h2>
-                <span class="badge bg-success">Новинка</span>
-              </div>
-
-              <p class="card-text text-muted">
-                8 минут на детских картах с ограничением скорости.
-              </p>
-
-              <p class="fw-bold fs-5 mt-auto">900 руб.</p>
-
-              <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
-                <button
-                  class="btn btn-outline-primary"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#orderModal"
-                >
-                  Забронировать
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-start mb-3">
-                <h2 class="card-title h5">Гонка на время</h2>
-                <span class="badge bg-danger">Скидка</span>
-              </div>
-
-              <p class="card-text text-muted">
-                Квалификация и финал с таблицей результатов.
-              </p>
-
-              <p class="fw-bold fs-5 mt-auto">2500 руб.</p>
-
-              <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
-                <button
-                  class="btn btn-outline-primary"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#orderModal"
-                >
-                  Забронировать
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </main>
-
-  <div
-    class="modal fade"
-    id="orderModal"
-    tabindex="-1"
-    aria-labelledby="orderModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title h5" id="orderModalLabel">
-            Быстрая заявка
-          </h2>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Закрыть"
-          ></button>
-        </div>
-
-        <div class="modal-body">
-          <p class="text-muted">
-            Оставьте контактные данные, и администратор свяжется с вами для подтверждения заезда.
-          </p>
-
-          <form>
-            <div class="mb-3">
-              <label for="modal-name" class="form-label">Имя</label>
-              <input id="modal-name" type="text" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-              <label for="modal-phone" class="form-label">Телефон</label>
-              <input id="modal-phone" type="tel" class="form-control" required>
-            </div>
-
-            <div class="form-check mb-3">
-              <input id="modal-agree" class="form-check-input" type="checkbox" required>
-              <label class="form-check-label" for="modal-agree">
-                Согласен на обработку данных
-              </label>
-            </div>
-          </form>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-            Закрыть
-          </button>
-          <button type="button" class="btn btn-primary">
-            Отправить
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-  </script>
+<body>
+<a class="skip-link" href="#main">К содержанию</a>
+<header class="site-header">
+<div class="topline">
+<div class="container d-flex flex-wrap justify-content-between gap-2">
+<span>Крытая трасса круглый год · открытая летом</span>
+<span>Ежедневно 10:00–23:00</span>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="navbar-brand brand" href="index.html">TURBO<span>KART</span>
+<small>КАРТИНГ-ЦЕНТР</small>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+<span class="navbar-toggler-icon">
+</span>
+</button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+<ul class="navbar-nav mx-auto gap-lg-3">
+<li class="nav-item">
+<a class="nav-link "  href="index.html">Главная</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" aria-current=page href="catalog.html">Карты и цены</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="product.html">О картах</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="contacts.html">Контакты</a>
+</li>
+<li class="nav-item dropdown">
+<button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Посетителям</button>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="index.html#tracks">Трассы</a>
+</li>
+<li>
+<a class="dropdown-item" href="contacts.html#rules">Правила и вопросы</a>
+</li>
+<li>
+<a class="dropdown-item" href="contacts.html#schedule">Часы работы</a>
+</li>
+</ul>
+</li>
+</ul>
+<a class="btn btn-primary" href="order.html">Выбрать заезд <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</nav>
+</header>
+<main id="main">
+<section class="page-intro container">
+<p class="eyebrow">ПАРК КАРТОВ / ТАРИФЫ</p>
+<h1>Твой карт.<br>Твои <span>правила темпа.</span>
+</h1>
+<p class="lead text-secondary">Выбирай по опыту, возрасту и настроению.<br>Стоимость указана за одного пилота и выбранную длительность.</p>
+</section>
+<section class="container pb-5" id="prices">
+<div class="d-flex justify-content-end mb-4">
+<button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#includedModal">Что входит в стоимость?</button>
+</div>
+<div class="row g-4">
+<div class="col-12 col-md-6 col-lg-4">
+<article class="card kart-card h-100" id="kart-lr6">
+<div class="kart-visual d-flex align-items-center justify-content-center">
+<span class="kart-number" aria-hidden="true">01</span>
+<img src="images/sodi-lr6.png" alt="SODI LR6, прокатный карт" loading="lazy">
+<span class="badge kart-badge">Первый старт</span>
+</div>
+<div class="card-body p-4 d-flex flex-column">
+<p class="eyebrow">Детям и юным пилотам</p>
+<h3 class="card-title">SODI LR6</h3>
+<p class="text-secondary">7–13 лет · рост от 130 см</p>
+<dl class="kart-specs">
+<div>
+<dt>Комплектация</dt>
+<dd>Honda GX160</dd>
+</div>
+<div>
+<dt>Трасса</dt>
+<dd>Крытая · заезды 7–13 лет</dd>
+</div>
+</dl>
+<p class="card-text small text-secondary">Регулируемые сиденье, руль и педали. Для детей 7–13 лет — отдельные заезды, каждый в своём карте.</p>
+<div class="mt-auto">
+<dl class="card-tariffs" aria-label="Стоимость за одного пилота">
+<div class="d-flex justify-content-between gap-2"><dt>10 минут</dt><dd data-price-kart="lr6" data-price-duration="10">900 ₽</dd></div>
+<div class="d-flex justify-content-between gap-2"><dt>15 минут</dt><dd data-price-kart="lr6" data-price-duration="15">1 300 ₽</dd></div>
+<div class="d-flex justify-content-between gap-2"><dt>20 минут</dt><dd data-price-kart="lr6" data-price-duration="20">1 700 ₽</dd></div>
+</dl>
+<div class="d-flex gap-2">
+<a class="btn btn-primary flex-grow-1" href="order.html?kart=lr6">Выбрать время ↗</a>
+<a class="btn btn-outline-dark" href="product.html?kart=lr6">О карте</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+<article class="card kart-card h-100" id="kart-rt10">
+<div class="kart-visual d-flex align-items-center justify-content-center">
+<span class="kart-number" aria-hidden="true">02</span>
+<img src="images/sodi-rt10.png" alt="SODI RT10, прокатный карт" loading="lazy">
+<span class="badge kart-badge">Начни здесь</span>
+</div>
+<div class="card-body p-4 d-flex flex-column">
+<p class="eyebrow">Взрослым и новичкам</p>
+<h3 class="card-title">SODI RT10</h3>
+<p class="text-secondary">от 14 лет · рост от 145 см</p>
+<dl class="kart-specs">
+<div>
+<dt>Комплектация</dt>
+<dd>Honda GX270</dd>
+</div>
+<div>
+<dt>Трасса</dt>
+<dd>Крытая и открытая</dd>
+</div>
+</dl>
+<p class="card-text small text-secondary">EASY DRIVE и регулируемые педали</p>
+<div class="mt-auto">
+<dl class="card-tariffs" aria-label="Стоимость за одного пилота">
+<div class="d-flex justify-content-between gap-2"><dt>10 минут</dt><dd data-price-kart="rt10" data-price-duration="10">1 200 ₽</dd></div>
+<div class="d-flex justify-content-between gap-2"><dt>15 минут</dt><dd data-price-kart="rt10" data-price-duration="15">1 700 ₽</dd></div>
+<div class="d-flex justify-content-between gap-2"><dt>20 минут</dt><dd data-price-kart="rt10" data-price-duration="20">2 200 ₽</dd></div>
+</dl>
+<div class="d-flex gap-2">
+<a class="btn btn-primary flex-grow-1" href="order.html?kart=rt10">Выбрать время ↗</a>
+<a class="btn btn-outline-dark" href="product.html?kart=rt10">О карте</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+<article class="card kart-card h-100" id="kart-sport">
+<div class="kart-visual d-flex align-items-center justify-content-center">
+<span class="kart-number" aria-hidden="true">03</span>
+<img src="images/sodi-sport.png" alt="SODI Sport, прокатный карт" loading="lazy">
+<span class="badge kart-badge">Следующий уровень</span>
+</div>
+<div class="card-body p-4 d-flex flex-column">
+<p class="eyebrow">Пилотам с опытом</p>
+<h3 class="card-title">SODI Sport</h3>
+<p class="text-secondary">от 16 лет · рост от 150 см</p>
+<dl class="kart-specs">
+<div>
+<dt>Комплектация</dt>
+<dd>Honda GX390</dd>
+</div>
+<div>
+<dt>Трасса</dt>
+<dd>Крытая и открытая</dd>
+</div>
+</dl>
+<p class="card-text small text-secondary">Спортивное шасси и регулируемые педали</p>
+<div class="mt-auto">
+<dl class="card-tariffs" aria-label="Стоимость за одного пилота">
+<div class="d-flex justify-content-between gap-2"><dt>10 минут</dt><dd data-price-kart="sport" data-price-duration="10">1 600 ₽</dd></div>
+<div class="d-flex justify-content-between gap-2"><dt>15 минут</dt><dd data-price-kart="sport" data-price-duration="15">2 300 ₽</dd></div>
+<div class="d-flex justify-content-between gap-2"><dt>20 минут</dt><dd data-price-kart="sport" data-price-duration="20">3 000 ₽</dd></div>
+</dl>
+<div class="d-flex gap-2">
+<a class="btn btn-primary flex-grow-1" href="order.html?kart=sport">Выбрать время ↗</a>
+<a class="btn btn-outline-dark" href="product.html?kart=sport">О карте</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<div class="modal fade" id="includedModal" tabindex="-1" aria-labelledby="includedTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h2 class="modal-title fs-4" id="includedTitle">На старт — без лишних забот</h2>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" type="button">
+</button>
+</div>
+<div class="modal-body">
+<ul class="included-list">
+<li>Заезд на выбранном карте в течение 10, 15 или 20 минут.</li>
+<li>Инструктаж и настройка посадки перед заездом.</li>
+<li>Шлем и необходимая защитная экипировка.</li>
+</ul>
+<p>Инструктаж не сокращает оплаченные минуты на трассе. Приезжайте за 20 минут до старта.</p>
+</div>
+<div class="modal-footer">
+<a class="btn btn-primary" href="order.html">Выбрать заезд</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-12 col-lg-4">
+<a class="brand footer-brand" href="index.html">TURBO<span>KART</span>
+</a>
+<p class="mt-3 footer-description">Твой первый поворот. Твой новый рекорд.<br>Картинг для детей, друзей и больших команд.</p>
+<span class="availability">
+<span aria-hidden="true">●</span> Крытая трасса — круглый год</span>
+</div>
+<div class="col-6 col-lg-2">
+<h2>На трассу</h2>
+<a href="catalog.html">Карты и цены</a>
+<a href="index.html#tracks">Наши трассы</a>
+<a href="order.html">Заявка на заезд</a>
+<a href="index.html#events">Корпоративы</a>
+</div>
+<div class="col-6 col-lg-3">
+<h2>Перед визитом</h2>
+<a href="contacts.html#rules">Правила и экипировка</a>
+<a href="contacts.html#faq">Частые вопросы</a>
+<a href="contacts.html#schedule">Часы работы</a>
+</div>
+<div class="col-12 col-lg-3">
+<h2>Контакты центра</h2>
+<p>Москва · виртуальная площадка</p>
+<p>Ежедневно 10:00–23:00</p>
+<a href="mailto:hello@turbokart.example">hello@turbokart.example</a>
+<p class="small mt-2">Телефон и точный адрес будут добавлены перед реальным открытием.</p>
+<a href="contacts.html">Контакты и как добраться ↗</a>
+</div>
+</div>
+<div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+<span>© 2026 TurboKart</span>
+<span>Учебный проект. Тарифы и условия демонстрационные. Заявки не отправляются.</span>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="js/karts.js?v=20261109c">
+</script>
+<script src="js/main.js?v=20261109d">
+</script>
 </body>
 </html>

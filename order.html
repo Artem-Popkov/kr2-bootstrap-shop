@@ -1,144 +1,271 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Заявка — TurboKart</title>
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="css/custom.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TurboKart — карты для детей и взрослых, трассы и понятные тарифы за время заезда. Учебный проект.">
+<title>Заявка на заезд — TurboKart</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css?v=20261109f">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">TurboKart</a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Заезд</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="order.html">Заявка</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Дополнительно
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все заезды</a></li>
-              <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <div class="card shadow-sm">
-          <div class="card-header bg-primary text-white">
-            <h1 class="h4 mb-0">Заявка на бронирование заезда</h1>
-          </div>
-
-          <div class="card-body">
-            <div class="alert alert-info" role="alert">
-              Заполните форму. Поля со звёздочкой являются обязательными.
-            </div>
-
-            <form>
-              <div class="row g-3">
-                <div class="col-12 col-md-6">
-                  <label for="order-name" class="form-label">Имя *</label>
-                  <input id="order-name" name="name" type="text" class="form-control" required>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="order-email" class="form-label">E-mail *</label>
-                  <input id="order-email" name="email" type="email" class="form-control" required>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="order-phone" class="form-label">Телефон</label>
-                  <div class="input-group">
-                    <span class="input-group-text">+7</span>
-                    <input id="order-phone" name="phone" type="tel" class="form-control" placeholder="900 000-00-00">
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                  <label for="order-product" class="form-label">Заезд</label>
-                  <select id="order-product" name="product" class="form-select">
-                    <option selected>Выберите заезд</option>
-                    <option value="start">Заезд «Старт»</option>
-                    <option value="kids">Детский заезд</option>
-                    <option value="race">Гонка на время</option>
-                  </select>
-                </div>
-
-                <div class="col-12">
-                  <label for="order-comment" class="form-label">Комментарий</label>
-                  <textarea id="order-comment" name="comment" class="form-control" rows="4"></textarea>
-                </div>
-
-                <div class="col-12">
-                  <div class="form-check">
-                    <input id="order-agree" class="form-check-input" type="checkbox" required>
-                    <label class="form-check-label" for="order-agree">
-                      Я согласен на обработку данных *
-                    </label>
-                  </div>
-                </div>
-
-                <div class="col-12 d-flex gap-2">
-                  <button class="btn btn-primary" type="submit">
-                    Отправить заявку
-                  </button>
-                  <button class="btn btn-outline-secondary" type="reset">
-                    Очистить
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-  </script>
+<a class="skip-link" href="#main">К содержанию</a>
+<header class="site-header">
+<div class="topline">
+<div class="container d-flex flex-wrap justify-content-between gap-2">
+<span>Крытая трасса круглый год · открытая летом</span>
+<span>Ежедневно 10:00–23:00</span>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="navbar-brand brand" href="index.html">TURBO<span>KART</span>
+<small>КАРТИНГ-ЦЕНТР</small>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+<span class="navbar-toggler-icon">
+</span>
+</button>
+<div class="collapse navbar-collapse" id="mainNavbar">
+<ul class="navbar-nav mx-auto gap-lg-3">
+<li class="nav-item">
+<a class="nav-link "  href="index.html">Главная</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="catalog.html">Карты и цены</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="product.html">О картах</a>
+</li>
+<li class="nav-item">
+<a class="nav-link "  href="contacts.html">Контакты</a>
+</li>
+<li class="nav-item dropdown">
+<button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Посетителям</button>
+<ul class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="index.html#tracks">Трассы</a>
+</li>
+<li>
+<a class="dropdown-item" href="contacts.html#rules">Правила и вопросы</a>
+</li>
+<li>
+<a class="dropdown-item" href="contacts.html#schedule">Часы работы</a>
+</li>
+</ul>
+</li>
+</ul>
+<a class="btn btn-primary" href="order.html">Выбрать заезд <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</nav>
+</header>
+<main id="main">
+<section class="page-intro container">
+<p class="eyebrow">ДО СТАРТА ОДИН ШАГ</p>
+<h1>Твоя следующая<br>
+<span>точка старта.</span>
+</h1>
+<p class="lead text-secondary">Выбери карт и продолжительность. Стоимость посчитается сразу.</p>
+</section>
+<section class="container pb-5">
+<noscript>
+<div class="alert alert-warning">Для расчёта включите JavaScript. Все тарифы доступны на странице «Карты и цены». Заявки на этом учебном сайте не отправляются.</div>
+</noscript>
+<div class="row g-4">
+<div class="col-lg-8">
+<form id="booking-form" class="booking-panel">
+<h2 class="h4 mb-4">Параметры заезда</h2>
+<div class="row g-3">
+<div class="col-md-8">
+<label class="form-label" for="booking-kart">Карт</label>
+<select class="form-select" name="kart" id="booking-kart">
+<option value="lr6">SODI LR6 — детям и юным пилотам</option>
+<option value="rt10">SODI RT10 — взрослым и новичкам</option>
+<option value="sport">SODI Sport — пилотам с опытом</option>
+</select>
+</div>
+<div class="col-md-4">
+<label class="form-label" for="booking-duration">Длительность</label>
+<select class="form-select" name="duration" id="booking-duration">
+<option value="10">10 минут</option>
+<option value="15">15 минут</option>
+<option value="20">20 минут</option>
+</select>
+</div>
+<div class="col-md-6">
+<label class="form-label" for="booking-date">Желаемая дата *</label>
+<input class="form-control" type="date" id="booking-date" name="date" required>
+</div>
+<div class="col-md-6">
+<label class="form-label" for="booking-time">Желаемое время *</label>
+<select class="form-select" id="booking-time" name="time" required>
+<option value="">Выберите время</option>
+<option>10:00</option>
+<option>10:30</option>
+<option>11:00</option>
+<option>11:30</option>
+<option>12:00</option>
+<option>12:30</option>
+<option>13:00</option>
+<option>13:30</option>
+<option>14:00</option>
+<option>14:30</option>
+<option>15:00</option>
+<option>15:30</option>
+<option>16:00</option>
+<option>16:30</option>
+<option>17:00</option>
+<option>17:30</option>
+<option>18:00</option>
+<option>18:30</option>
+<option>19:00</option>
+<option>19:30</option>
+<option>20:00</option>
+<option>20:30</option>
+<option>21:00</option>
+<option>21:30</option>
+<option>22:00</option>
+<option>22:30</option>
+</select>
+</div>
+<div class="col-md-6">
+<label class="form-label" for="booking-track">Трасса</label>
+<select class="form-select" id="booking-track" name="track">
+<option value="indoor">Крытая</option>
+<option value="outdoor">Открытая · летом</option>
+</select>
+<div class="form-text" id="track-hint">Детские сессии проходят на крытой трассе отдельно от взрослых.</div>
+</div>
+<div class="col-md-6">
+<label class="form-label" for="booking-people">Количество пилотов</label>
+<input class="form-control" type="number" id="booking-people" name="people" min="1" max="6" value="1" required>
+<div class="form-text">Одна модель и длительность для всей группы.</div>
+</div>
+<div class="col-12">
+<hr class="my-3">
+<h2 class="h4">Как к тебе обращаться?</h2>
+</div>
+<div class="col-md-6">
+<label class="form-label" for="booking-name">Имя *</label>
+<input class="form-control" id="booking-name" name="name" autocomplete="given-name" maxlength="60" required>
+</div>
+<div class="col-md-6">
+<label class="form-label" for="booking-email">Email *</label>
+<input class="form-control" type="email" id="booking-email" name="email" autocomplete="email" required>
+</div>
+<div class="col-12">
+<label class="form-label" for="booking-comment">Пожелания</label>
+<textarea class="form-control" id="booking-comment" name="comment" rows="3" maxlength="500" placeholder="Например: первый заезд или корпоративная встреча">
+</textarea>
+</div>
+<div class="col-12">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="booking-agree" required>
+<label class="form-check-label" for="booking-agree">Я прочитал(а) <a href="contacts.html#rules">правила посещения</a> *</label>
+</div>
+</div>
+<div class="col-12 d-flex gap-3">
+<button type="submit" id="booking-submit" class="btn btn-primary">Подготовить заявку ↗</button>
+<button class="btn btn-outline-dark" type="reset">Очистить</button>
+</div>
+</div>
+</form>
+</div>
+<div class="col-lg-4">
+<aside class="booking-summary" aria-label="Расчёт стоимости">
+<p class="eyebrow">ТВОЙ ЗАЕЗД</p>
+<h2 id="summary-kart" class="h3">SODI LR6</h2>
+<p id="summary-conditions" class="small text-secondary">
+</p>
+<hr>
+<div class="summary-line d-flex justify-content-between">
+<span>На трассе</span>
+<strong id="summary-duration">10 минут</strong>
+</div>
+<div class="summary-line d-flex justify-content-between">
+<span>Один пилот</span>
+<strong id="summary-price">900 ₽</strong>
+</div>
+<div class="summary-line d-flex justify-content-between">
+<span>Пилотов</span>
+<strong id="summary-people">1</strong>
+</div>
+<div class="summary-total d-flex justify-content-between align-items-center">
+<span>Итого</span>
+<strong id="summary-total" aria-live="polite">900 ₽</strong>
+</div>
+<p class="small text-secondary">Инструктаж и экипировка включены. Желаемое время требует подтверждения.</p>
+<p id="booking-error" class="text-danger small" role="alert">
+</p>
+</aside>
+</div>
+</div>
+</section>
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h2 class="modal-title h4" id="bookingModalTitle">Заявка подготовлена</h2>
+<button class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" type="button">
+</button>
+</div>
+<div class="modal-body">
+<p id="booking-result">
+</p>
+<div class="alert alert-info">Это демонстрация: запрос никуда не отправлен, время не забронировано.</div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-dark" data-bs-dismiss="modal" type="button">Понятно</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="row g-4">
+<div class="col-12 col-lg-4">
+<a class="brand footer-brand" href="index.html">TURBO<span>KART</span>
+</a>
+<p class="mt-3 footer-description">Твой первый поворот. Твой новый рекорд.<br>Картинг для детей, друзей и больших команд.</p>
+<span class="availability">
+<span aria-hidden="true">●</span> Крытая трасса — круглый год</span>
+</div>
+<div class="col-6 col-lg-2">
+<h2>На трассу</h2>
+<a href="catalog.html">Карты и цены</a>
+<a href="index.html#tracks">Наши трассы</a>
+<a href="order.html">Заявка на заезд</a>
+<a href="index.html#events">Корпоративы</a>
+</div>
+<div class="col-6 col-lg-3">
+<h2>Перед визитом</h2>
+<a href="contacts.html#rules">Правила и экипировка</a>
+<a href="contacts.html#faq">Частые вопросы</a>
+<a href="contacts.html#schedule">Часы работы</a>
+</div>
+<div class="col-12 col-lg-3">
+<h2>Контакты центра</h2>
+<p>Москва · виртуальная площадка</p>
+<p>Ежедневно 10:00–23:00</p>
+<a href="mailto:hello@turbokart.example">hello@turbokart.example</a>
+<p class="small mt-2">Телефон и точный адрес будут добавлены перед реальным открытием.</p>
+<a href="contacts.html">Контакты и как добраться ↗</a>
+</div>
+</div>
+<div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+<span>© 2026 TurboKart</span>
+<span>Учебный проект. Тарифы и условия демонстрационные. Заявки не отправляются.</span>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script src="js/karts.js?v=20261109c">
+</script>
+<script src="js/main.js?v=20261109d">
+</script>
 </body>
 </html>

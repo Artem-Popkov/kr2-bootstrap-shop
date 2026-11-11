@@ -1,16 +1,1018 @@
+/* Bootstrap отвечает за сетку и компоненты;
+здесь — оформление TurboKart. */
+:root {
+  --ink:#15191b;
+  --muted:#646b6d;
+  --paper:#f5f5f0;
+  --accent:#d9fc53;
+  --line:#dce0d6;
+  --bs-primary:#d9fc53;
+  --bs-body-color:#15191b;
+  --bs-body-font-family:Arial,Helvetica,sans-serif;
+}
+
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:110px;
+}
+
 body {
-  min-height: 100vh;
+  background:var(--paper);
+  line-height:1.6;
 }
 
-.placeholder-box {
-  min-height: 240px;
+h1,h2,h3,.brand {
+  font-weight:800;
+  letter-spacing:-.045em;
+  line-height:1.08;
 }
 
-.placeholder-image {
-  min-height: 320px;
+h2 {
+  font-size:clamp(2rem,3.2vw,3rem);
 }
 
-.card-img-top {
-  height: 180px;
-  object-fit: cover;
+h3 {
+  font-size:1.45rem;
 }
+
+a {
+  color:inherit;
+}
+
+a:hover {
+  color:#566a09;
+}
+
+button,a,input,select,textarea {
+  touch-action:manipulation;
+}
+
+a:focus-visible,button:focus-visible {
+  outline:3px solid #749300;
+  outline-offset:4px;
+}
+
+.skip-link {
+  position:fixed;
+  top:-80px;
+  left:12px;
+  background:var(--accent);
+  padding:12px;
+  z-index:2000;
+}
+
+.skip-link:focus {
+  top:12px;
+}
+
+.container {
+  max-width:1200px;
+}
+
+.text-accent {
+  color:var(--accent)!important;
+}
+
+.eyebrow {
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.14em;
+  margin-bottom:16px;
+  text-transform:uppercase;
+}
+
+.btn {
+  border-radius:5px;
+  font-weight:700;
+  padding:.8rem 1.15rem;
+  font-size:.9rem;
+}
+
+.btn-lg {
+  padding:1rem 1.5rem;
+}
+
+.btn-primary {
+  --bs-btn-bg:var(--accent);
+  --bs-btn-border-color:var(--accent);
+  --bs-btn-color:var(--ink);
+  --bs-btn-hover-bg:#c8ee39;
+  --bs-btn-hover-color:var(--ink);
+  --bs-btn-hover-border-color:#c8ee39;
+  --bs-btn-active-bg:#b6d936;
+  --bs-btn-active-color:var(--ink);
+  --bs-btn-active-border-color:#b6d936;
+  --bs-btn-disabled-bg:#dce6b8;
+  --bs-btn-disabled-border-color:#dce6b8;
+  --bs-btn-disabled-color:#555;
+}
+
+.btn-outline-dark {
+  --bs-btn-color:var(--ink);
+  --bs-btn-border-color:#c7cdc0;
+}
+
+.text-secondary {
+  color:var(--muted)!important;
+}
+
+.badge {
+  font-size:.7rem;
+  padding:.5rem .65rem;
+  border-radius:3px;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+
+.site-header {
+  background:var(--ink);
+  color:white;
+}
+
+.topline {
+  border-bottom:1px solid #ffffff20;
+  font-size:.67rem;
+  color:#c5cbc8;
+  padding:7px 0;
+  letter-spacing:.025em;
+}
+
+.navbar {
+  padding:17px 0;
+}
+
+.navbar-brand {
+  margin-right:0;
+}
+
+.brand {
+  font-size:1.65rem;
+  letter-spacing:-.06em;
+  text-decoration:none;
+  color:white;
+  display:inline-block;
+  line-height:1;
+}
+
+.brand:hover {
+  color:white;
+}
+
+.brand span {
+  color:var(--accent);
+}
+
+.brand small {
+  display:block;
+  font-size:.5rem;
+  letter-spacing:.32em;
+  margin-top:8px;
+  font-weight:500;
+}
+
+.navbar .nav-link {
+  font-size:.82rem;
+  color:#c1c6c4;
+  font-weight:600;
+}
+
+.navbar .nav-link.active {
+  color:var(--accent);
+}
+
+.navbar button.nav-link {
+  border:0;
+  background:none;
+}
+
+.dropdown-menu {
+  font-size:.85rem;
+}
+
+.navbar .btn {
+  font-size:.8rem;
+}
+
+.hero {
+  position:relative;
+  isolation:isolate;
+  background:#161a1c;
+  color:white;
+  overflow:hidden;
+}
+
+.hero-photo {
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:url('../images/hero-kart.jpg') center 48%/cover no-repeat;
+  opacity:.78;
+}
+
+.hero::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(90deg,rgba(10,15,17,.95) 0%,rgba(10,15,17,.65) 46%,rgba(10,15,17,.13) 100%),linear-gradient(0deg,#111719 0%,transparent 38%);
+}
+
+.hero-content {
+  padding-top:83px;
+  padding-bottom:32px;
+}
+
+.hero h1 {
+  font-size:clamp(2.6rem,5.8vw,5.2rem);
+  line-height:1.02;
+  letter-spacing:-.055em;
+  max-width:900px;
+}
+
+.hero h1 span {
+  color:var(--accent);
+}
+
+.hero-lead {
+  color:#e2e5df;
+  line-height:1.65;
+  margin:25px 0 30px;
+  font-size:1rem;
+}
+
+.hero-stats {
+  border-top:1px solid #ffffff35;
+  margin-top:74px;
+  padding-top:20px;
+}
+
+.hero-stats strong {
+  display:block;
+  font-size:1.9rem;
+  line-height:1.15;
+  font-weight:700;
+  letter-spacing:-.045em;
+}
+
+.hero-stats span {
+  font-size:.72rem;
+  color:#c0c8c4;
+}
+
+.section {
+  padding-top:78px;
+  padding-bottom:78px;
+}
+
+.section-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin-bottom:32px;
+}
+
+.section-heading h2 {
+  margin-bottom:0;
+}
+
+.text-link {
+  font-size:.85rem;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid #a2aa98;
+  padding-bottom:5px;
+  flex-shrink:0;
+}
+
+.kart-card {
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+  transition:transform .2s;
+}
+
+.kart-card:hover {
+  transform:translateY(-4px);
+}
+
+.kart-visual {
+  height:235px;
+  background:#e8ece3;
+  position:relative;
+  padding:25px;
+}
+
+.kart-visual::after {
+  content:'';
+  position:absolute;
+  width:65%;
+  height:20px;
+  background:#12200d20;
+  filter:blur(12px);
+  bottom:32px;
+}
+
+.kart-visual img {
+  position:relative;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  z-index:1;
+}
+
+.kart-number {
+  position:absolute;
+  top:-8px;
+  right:16px;
+  font-size:7rem;
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:-.08em;
+  color:#d7dfcd;
+}
+
+.kart-badge {
+  position:absolute;
+  bottom:14px;
+  left:20px;
+  z-index:2;
+  background:var(--ink);
+  color:white;
+}
+
+.kart-card .eyebrow {
+  font-size:.61rem;
+  color:#657350;
+  margin-bottom:10px;
+}
+
+.kart-card h3 {
+  font-size:1.8rem;
+}
+
+.kart-specs {
+  font-size:.75rem;
+  margin-bottom:14px;
+}
+
+.kart-specs div {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  border-top:1px solid #e8ebe4;
+  padding:9px 0;
+}
+
+.kart-specs dt {
+  font-weight:400;
+  color:var(--muted);
+  flex-shrink:0;
+}
+
+.kart-specs dd {
+  margin:0;
+  text-align:right;
+  font-weight:600;
+}
+
+.price {
+  font-size:1.7rem;
+  font-weight:800;
+  letter-spacing:-.04em;
+  line-height:1.2;
+  margin-top:16px;
+}
+
+.price span {
+  font-size:.8rem;
+  letter-spacing:0;
+  font-weight:400;
+  color:var(--muted);
+}
+
+.price #kart-price {
+  font-size:2rem;
+  font-weight:800;
+  color:var(--ink);
+}
+
+.kart-card .btn {
+  font-size:.75rem;
+  padding:.8rem .85rem;
+}
+
+.section-dark {
+  background:var(--ink);
+  color:white;
+}
+
+.section-dark h2 {
+  color:white;
+}
+
+.track-panel {
+  padding:35px;
+  background:linear-gradient(140deg,#283337,#1d2427);
+  border:1px solid #ffffff20;
+  border-radius:8px;
+  position:relative;
+  overflow:hidden;
+}
+
+.track-panel::after {
+  content:'';
+  position:absolute;
+  width:200px;
+  height:170px;
+  border:22px solid #ffffff05;
+  border-radius:100%;
+  transform:rotate(-35deg);
+  right:-40px;
+  bottom:-45px;
+  pointer-events:none;
+}
+
+.track-outdoor {
+  background:linear-gradient(140deg,#39432b,#202820);
+}
+
+.track-panel h3 {
+  font-size:2rem;
+  margin-top:30px;
+}
+
+.track-panel p {
+  color:#c7ceca;
+  max-width:390px;
+}
+
+.track-panel .track-meta {
+  font-size:.74rem;
+  color:var(--accent);
+  margin-top:25px;
+}
+
+.visit-steps {
+  padding:0;
+  list-style:none;
+  margin:0;
+}
+
+.visit-steps li {
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.visit-steps li:first-child {
+  padding-top:0;
+}
+
+.visit-steps li>span {
+  font-weight:700;
+  font-size:.8rem;
+  color:#63754d;
+  min-width:24px;
+}
+
+.visit-steps h3 {
+  font-size:1.3rem;
+}
+
+.visit-steps p {
+  color:var(--muted);
+  font-size:.9rem;
+  margin:10px 0 0;
+}
+
+.event-panel {
+  background:var(--accent);
+  padding:45px;
+  border-radius:8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.event-panel h2 {
+  font-size:clamp(2rem,3.5vw,3.1rem);
+}
+
+.event-panel p:not(.eyebrow) {
+  font-size:.9rem;
+  margin-top:20px;
+}
+
+.event-panel .btn {
+  flex-shrink:0;
+}
+
+.site-footer {
+  padding:55px 0 0;
+  background:#15191b;
+  color:#c1c9c3;
+}
+
+.site-footer h2 {
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:0;
+  color:white;
+  margin-bottom:20px;
+}
+
+.site-footer a:not(.brand) {
+  display:block;
+  text-decoration:none;
+  font-size:.78rem;
+  margin-bottom:10px;
+  overflow-wrap:anywhere;
+}
+
+.site-footer a:hover {
+  color:var(--accent);
+}
+
+.site-footer p {
+  font-size:.78rem;
+  margin-bottom:10px;
+}
+
+.footer-description {
+  max-width:330px;
+  line-height:1.8;
+}
+
+.availability {
+  font-size:.68rem;
+  color:#c4d3b7;
+}
+
+.availability span {
+  color:var(--accent);
+  margin-right:6px;
+}
+
+.footer-bottom {
+  font-size:.62rem;
+  border-top:1px solid #ffffff20;
+  padding:20px 0;
+  margin-top:40px;
+  color:#a4afa7;
+}
+
+.page-intro {
+  padding-top:60px;
+  padding-bottom:35px;
+}
+
+.page-intro h1 {
+  font-size:clamp(2.6rem,5vw,4.4rem);
+  margin-bottom:22px;
+}
+
+.page-intro h1 span {
+  color:#5c6d2a;
+}
+
+.page-intro .lead {
+  font-size:1rem;
+}
+
+.tariff-table {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:12px 24px;
+}
+
+.table>:not(caption)>*>* {
+  padding:17px 13px;
+  background:transparent;
+  border-color:#e3e7dd;
+  color:var(--ink);
+}
+
+.table thead th {
+  font-size:.75rem;
+  color:var(--muted);
+  font-weight:500;
+  white-space:nowrap;
+}
+
+.table caption {
+  font-size:.72rem;
+  padding-top:15px;
+}
+
+.product-visual {
+  background:#e6ebde;
+  border-radius:10px;
+  padding:40px;
+  min-height:330px;
+}
+
+.product-visual img {
+  width:100%;
+  max-height:330px;
+  object-fit:contain;
+}
+
+.product-title {
+  font-size:clamp(2.6rem,5vw,4.4rem);
+}
+
+.breadcrumb {
+  font-size:.75rem;
+  margin-bottom:30px;
+}
+
+.spec-table {
+  font-size:.85rem;
+}
+
+.spec-table th {
+  width:35%;
+  font-weight:500;
+  color:var(--muted);
+}
+
+.price-panel,.booking-panel,.booking-summary,.contact-panel {
+  background:white;
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+
+.price-panel h2 {
+  font-size:1.7rem;
+}
+
+.tariff-choice {
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+  text-decoration:none;
+  font-size:.9rem;
+}
+
+.tariff-choice:hover {
+  color:#4d6600;
+}
+
+.booking-summary {
+  position:sticky;
+  top:24px;
+  background:#e9efdd;
+}
+
+.form-control,.form-select {
+  border-color:#cdd2c5;
+  border-radius:4px;
+  padding:.8rem;
+  font-size:.9rem;
+}
+
+.form-control:focus,.form-select:focus {
+  border-color:#7c9442;
+  box-shadow:0 0 0 .2rem #d9fc5355;
+}
+
+.form-label {
+  font-size:.8rem;
+  font-weight:600;
+}
+
+.form-text {
+  font-size:.7rem;
+}
+
+.summary-line {
+  gap:10px;
+  font-size:.8rem;
+  margin:14px 0;
+}
+
+.summary-total {
+  border-top:1px solid #c8d2b9;
+  padding:23px 0;
+  margin-top:20px;
+}
+
+.summary-total strong {
+  font-size:1.8rem;
+  letter-spacing:-.04em;
+}
+
+.contact-panel h2 {
+  font-size:2rem;
+}
+
+.contact-panel p {
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.rule-card {
+  border-top:1px solid #b9c4a7;
+  padding-top:20px;
+}
+
+.rule-card>span {
+  display:block;
+  color:#64774b;
+  font-size:.8rem;
+  margin-bottom:20px;
+}
+
+.rule-card h3 {
+  font-size:1.25rem;
+}
+
+.rule-card p {
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+.accordion {
+  --bs-accordion-active-bg:#eaf1dc;
+  --bs-accordion-active-color:var(--ink);
+  --bs-accordion-btn-focus-box-shadow:0 0 0 .2rem #d9fc5370;
+  --bs-accordion-border-color:var(--line);
+}
+
+.accordion-button {
+  font-size:.95rem;
+  font-weight:600;
+  padding:22px;
+}
+
+.accordion-body {
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.modal-content {
+  border:0;
+  border-radius:8px;
+}
+
+.modal-header,.modal-footer {
+  padding:20px 24px;
+}
+
+.modal-body {
+  padding:24px;
+  font-size:.9rem;
+}
+
+.included-list {
+  padding-left:20px;
+}
+
+.included-list li {
+  margin-bottom:12px;
+}
+
+section[id] {
+  scroll-margin-top:30px;
+}
+
+@media(max-width:991px) {
+  .navbar-collapse {
+    padding-top:20px;
+  }
+
+  .navbar-collapse>.btn {
+    margin-top:15px;
+  }
+
+  .navbar .dropdown-menu {
+    background:#fff;
+  }
+
+  .booking-summary {
+    position:static;
+  }
+
+  .hero-content {
+    padding-top:60px;
+  }
+
+  .hero h1 {
+    font-size:clamp(2.6rem,7vw,4.5rem);
+  }
+
+  .hero-stats {
+    margin-top:55px;
+  }
+
+  .event-panel {
+    align-items:start;
+    flex-direction:column;
+  }
+
+  .section {
+    padding-top:55px;
+    padding-bottom:55px;
+  }
+
+  .kart-visual {
+    height:230px;
+  }
+
+}
+
+@media(max-width:575px) {
+  .container {
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .topline {
+    font-size:.57rem;
+  }
+
+  .brand {
+    font-size:1.45rem;
+  }
+
+  .hero h1 {
+    font-size:clamp(2rem,8.4vw,3rem);
+  }
+
+  .hero-lead {
+    font-size:.9rem;
+  }
+
+  .hero-photo {
+    background-position:62% center;
+  }
+
+  .hero::after {
+    background:linear-gradient(90deg,#101719eb,#1017198c),linear-gradient(0deg,#111719,transparent);
+  }
+
+  .hero-content {
+    padding-top:45px;
+  }
+
+  .hero-stats {
+    margin-top:45px;
+  }
+
+  .hero-stats strong {
+    font-size:1.6rem;
+  }
+
+  .hero-stats span {
+    font-size:.65rem;
+  }
+
+  .hero .btn {
+    font-size:.8rem;
+    padding:.85rem 1rem;
+  }
+
+  .section-heading {
+    display:block;
+  }
+
+  .section-heading>.text-link,.section-heading>.btn {
+    display:inline-block;
+    margin-top:20px;
+  }
+
+  .kart-visual {
+    height:240px;
+  }
+
+  .track-panel,.event-panel {
+    padding:25px;
+  }
+
+  .event-panel br {
+    display:none;
+  }
+
+  .page-intro {
+    padding-top:40px;
+  }
+
+  .page-intro h1 {
+    font-size:2.7rem;
+  }
+
+  .booking-panel,.booking-summary,.contact-panel,.price-panel {
+    padding:22px;
+  }
+
+  .tariff-table {
+    padding:4px 8px;
+  }
+
+  .table>:not(caption)>*>* {
+    padding:14px 8px;
+    font-size:.78rem;
+  }
+
+  .spec-table th {
+    width:38%;
+  }
+
+  .product-visual {
+    min-height:220px;
+    padding:20px;
+  }
+
+  .site-footer {
+    padding-top:40px;
+  }
+
+  .footer-bottom {
+    font-size:.6rem;
+  }
+
+  .event-panel .btn {
+    width:100%;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto;
+  }
+
+  *,*::before,*::after {
+    transition:none!important;
+    animation:none!important;
+  }
+
+}
+
+.price .price-amount {
+  font-size:1.7rem;
+  font-weight:800;
+  letter-spacing:-.04em;
+  color:var(--ink);
+}
+
+/* Крупный вертикальный интервал без выхода Bootstrap-row за края контейнера. */
+.container > .row.g-5 {
+  --bs-gutter-x: 1.5rem;
+}
+
+/* Все длительности и цены рядом с выбранной моделью. */
+.card-tariffs {
+  margin: 1rem 0;
+  padding: .75rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.card-tariffs > div {
+  padding: .2rem 0;
+}
+.card-tariffs dt {
+  color: var(--muted);
+  font-weight: 400;
+}
+.card-tariffs dd {
+  margin: 0;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.track-map { margin: 1.5rem 0; }
+.track-map img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.track-stats dt { color: #c7ceca; font-size: .8rem; font-weight: 400; }
+.track-stats dd { margin: .2rem 0 0; color: #fff; font-size: 1.55rem; font-weight: 700; }
+
+/* Декор остаётся за пределами центрального контейнера. */
+.section-decor { position: relative; isolation: isolate; overflow: hidden; }
+@media (min-width: 1400px) {
+  .section-decor::before, .section-decor::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: min(230px, calc((100% - 1200px) / 2 - 20px));
+    height: 700px;
+    background: url('../images/catalog-side.svg') center / 100% 100% no-repeat;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .section-decor::before { left: 0; }
+  .section-decor::after { right: 0; transform: translateY(-50%) rotate(180deg); }
+}
+
+@media (min-width: 1400px) {
+  .section-decor-dark::before, .section-decor-dark::after {
+    filter: brightness(2.2);
+    opacity: .65;
+  }
+}
+
+/* Один рисунок на общую область двух светлых разделов. */
+.visit-sections::before, .visit-sections::after { height: 100%; }
